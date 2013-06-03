@@ -17,8 +17,11 @@ Open Eclipse with ADT support.
 #. Select 'Android'>'Existing Code into Workspace'.
 #. Browse to /path/to/OpportunisticOwnCloud/actionbarsherlock.
 #. Again, select 'Android'>'Existing Code into Workspace'.
-#. Browse to /path/to/OpportunisticOwnCloud263 and select
+#. Browse to /path/to/OpportunisticOwnCloud
 #. Now, right-click the OpportunisticOwnCloud project in the Eclipse Package Explorer. 
-#. Select 'Properties' and select actionbarsherlock as a library.
-#. Make sure that simple-xml-2.6.2.jar is in the libs/ directory in the OpportunisticOwnCloud project.
+#. Select 'Properties'
+
+.. _get_apk
+Getting OpportunisticOwnCloud.apk
+---------------------------------
 

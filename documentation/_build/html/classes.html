@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Classes Used in the OpportunisticOwnCloud Application &mdash; OOC Documentation 0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="OOC Documentation 0 documentation" href="index.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="installation.html" title="Installation"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">OOC Documentation 0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="classes-used-in-the-opportunisticowncloud-application">
+<h1>Classes Used in the OpportunisticOwnCloud Application<a class="headerlink" href="#classes-used-in-the-opportunisticowncloud-application" title="Permalink to this headline">¶</a></h1>
+<p>Here we describe the classes used in the OpportunisticOwnCloud application.</p>
+<div class="section" id="connectivitychangereceiver">
+<h2>ConnectivityChangeReceiver<a class="headerlink" href="#connectivitychangereceiver" title="Permalink to this headline">¶</a></h2>
+<p>The ConnectivtyChangeReceive class is responsinle for listeining for network
+events and creating Intent classes to handle the network events.
+This class has a lifetime that endures throughout the application lifetime.</p>
+<p>Extends: BroadcastReceiver
+Implements: NONE</p>
+<p>Public functions:</p>
+<blockquote>
+<div>void onReceive(Context, Intent)</div></blockquote>
+<p>Sub-Classes: NONE</p>
+</div>
+<div class="section" id="syncservice">
+<h2>SyncService<a class="headerlink" href="#syncservice" title="Permalink to this headline">¶</a></h2>
+<p>The SyncService is created from the ConnectivityChangeReceive class when a
+network event is detected.</p>
+<p>Extends: IntentService
+Implements: NONE</p>
+<p>Public functions: NONE</p>
+<p>Sub-Classes:</p>
+<blockquote>
+<div><p><em>mThread</em></p>
+<blockquote>
+<div><ul>
+<li><p class="first">Extends: Thread</p>
+</li>
+<li><p class="first">Implements: NONE</p>
+</li>
+<li><p class="first">Public functions:</p>
+<blockquote>
+<div><p>void run()</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p><em>DownLoadThread</em></p>
+<blockquote>
+<div><ul>
+<li><p class="first">Extends: NONE</p>
+</li>
+<li><p class="first">Implements: Runnable</p>
+</li>
+<li><p class="first">Public functions:</p>
+<blockquote>
+<div><p>void run()</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p><em>UploadThread</em></p>
+<blockquote>
+<div><ul>
+<li><p class="first">Extends: NONE</p>
+</li>
+<li><p class="first">Implements: Runnable</p>
+</li>
+<li><p class="first">Public functions:</p>
+<blockquote>
+<div><p>void run()</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="mainactivity">
+<h2>MainActivity<a class="headerlink" href="#mainactivity" title="Permalink to this headline">¶</a></h2>
+<p>The MainActivity class is primarily responsible for managing the GUI aspect of
+OpportunisticOwnCloud. It creates the LocalFileFragmentTab and the
+RemoteFileFragmetnTab instances. It also starts the SettingsActivity if the user
+has never set OpportunisticOwnCloud settings on the phone prior to running
+the applications. MainActivity is launched by the application when it is first opened.</p>
+<p>Extends: SherlockFragmentActivity
+Implements: NONE</p>
+<p>Public functions:</p>
+<blockquote>
+<div>void onCreate(Bundle)
+void onPause()
+void onResume()
+boolean onCreateOptionsMenu(Menu)
+boolean onOptionsItemSelected(MenuItem)</div></blockquote>
+<p>Sub-Classes:</p>
+<blockquote>
+<div><p><em>mThread</em></p>
+<blockquote>
+<div><ul>
+<li><p class="first">Extends: Thread</p>
+</li>
+<li><p class="first">Implements: NONE</p>
+</li>
+<li><p class="first">Public functions:</p>
+<blockquote>
+<div><p>void run()</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="localfilefragmenttab">
+<h2>LocalFileFragmentTab<a class="headerlink" href="#localfilefragmenttab" title="Permalink to this headline">¶</a></h2>
+<p>The LocalFileFragmentTab class is responsible for displaying the files located
+on the user&#8217;s ownCloud directory on /sdcard. It provides navigation functionality
+for file browsing as well as on-demand upload functionality.</p>
+<p>Extends: SherlockFragment
+Implements: ActionBar.TabListener</p>
+<p>Public functions:</p>
+<blockquote>
+<div>void onCreate(Bundle)
+void onTabSelected(Tab, FragmentTransaction)
+void onTabUnselected(Tab, FragmentTransaction)
+void onTabReselected(Tab, FragmentTransaction)</div></blockquote>
+<p>Sub-Classes:</p>
+<blockquote>
+<div><p><em>mThread</em></p>
+<blockquote>
+<div><ul>
+<li><p class="first">Extends: Thread</p>
+</li>
+<li><p class="first">Implements: NONE</p>
+</li>
+<li><p class="first">Public functions:</p>
+<blockquote>
+<div><p>void run()</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p><em>UploadThread</em></p>
+<blockquote>
+<div><ul>
+<li><p class="first">Extends: NONE</p>
+</li>
+<li><p class="first">Implements: Runnable</p>
+</li>
+<li><p class="first">Public functions:</p>
+<blockquote>
+<div><p>void run()</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="remotefilefragmenttab">
+<h2>RemoteFileFragmentTab<a class="headerlink" href="#remotefilefragmenttab" title="Permalink to this headline">¶</a></h2>
+<p>The RemoteFileFragmentTab class is responsible for displaying the user&#8217;s files located
+on the ownCloud server. It provides navigation functionality
+for file browsing as well as on-demand download functionality.</p>
+<p>Extends: SherlockFragment
+Implements: ActionBar.TabListener</p>
+<p>Public functions:</p>
+<blockquote>
+<div>void onCreate(Bundle)
+void onTabSelected(Tab, FragmentTransaction)
+void onTabUnselected(Tab, FragmentTransaction)
+void onTabReselected(Tab, FragmentTransaction)</div></blockquote>
+<p>Sub-Classes:</p>
+<blockquote>
+<div><p><em>mThread</em></p>
+<blockquote>
+<div><ul>
+<li><p class="first">Extends: Thread</p>
+</li>
+<li><p class="first">Implements: NONE</p>
+</li>
+<li><p class="first">Public functions:</p>
+<blockquote>
+<div><p>void run()</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p><em>DownloadThread</em></p>
+<blockquote>
+<div><ul>
+<li><p class="first">Extends: NONE</p>
+</li>
+<li><p class="first">Implements: Runnable</p>
+</li>
+<li><p class="first">Public functions:</p>
+<blockquote>
+<div><p>void run()</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="settingsactivity">
+<h2>SettingsActivity<a class="headerlink" href="#settingsactivity" title="Permalink to this headline">¶</a></h2>
+<p>The SettingsActivity provides a simple interface for the user to set
+global settings, including username, password, and URL information for
+connecting with the ownCloud server as well as setting sync frequency and
+toggling opportunistic synchronization on and off. The data object created
+is used globally to provide necessary settings information to the other classes.</p>
+<p>Extends: PreferenceActivity
+Implements: NONE</p>
+<p>Public functions: NONE</p>
+<p>Sub-Classes: NONE</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Classes Used in the OpportunisticOwnCloud Application</a><ul>
+<li><a class="reference internal" href="#connectivitychangereceiver">ConnectivityChangeReceiver</a></li>
+<li><a class="reference internal" href="#syncservice">SyncService</a></li>
+<li><a class="reference internal" href="#mainactivity">MainActivity</a></li>
+<li><a class="reference internal" href="#localfilefragmenttab">LocalFileFragmentTab</a></li>
+<li><a class="reference internal" href="#remotefilefragmenttab">RemoteFileFragmentTab</a></li>
+<li><a class="reference internal" href="#settingsactivity">SettingsActivity</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="installation.html"
+                        title="previous chapter">Installation</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/classes.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="installation.html" title="Installation"
+             >previous</a> |</li>
+        <li><a href="index.html">OOC Documentation 0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Paul Schmitt and Morgan Vigil.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+    </div>
+  </body>
+</html>

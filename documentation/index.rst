@@ -15,7 +15,7 @@ Contents:
    requirements
    setup
    installation
-   
+   classes 
 
 
 Indices and tables
