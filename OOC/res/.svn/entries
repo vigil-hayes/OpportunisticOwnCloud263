@@ -1,0 +1,70 @@
+10
+
+dir
+40
+svn+ssh://morgan@128.111.52.177/media/backup/263_svn/OOC/res
+svn+ssh://morgan@128.111.52.177/media/backup/263_svn
+
+
+
+2013-06-01T19:14:41.706293Z
+38
+pschmitt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2d3963f5-3c6f-4ca1-a371-cfb51a5e8ee2
+
+values
+dir
+
+values-sw720dp-land
+dir
+
+values-sw600dp
+dir
+
+xml
+dir
+
+drawable-hdpi
+dir
+
+drawable-xxhdpi
+dir
+
+menu
+dir
+
+values-v11
+dir
+
+drawable-ldpi
+dir
+
+values-large
+dir
+
+values-v14
+dir
+
+drawable-mdpi
+dir
+
+drawable-xhdpi
+dir
+
+layout
+dir
+
