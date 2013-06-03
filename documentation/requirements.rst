@@ -22,7 +22,7 @@ Android
 *DEVELOPERS ONLY*
 
 In order to contribute to OOC, you must have Android ADT. We recommend downloading it from 
-`here<http://developer.android.com/sdk/index.html`_ as this provides the entire Android SDK, 
+`<http://developer.android.com/sdk/index.html>`_ as this provides the entire Android SDK, 
 including Eclipse with ADT plugins.
 
 
