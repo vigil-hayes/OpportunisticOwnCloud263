@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>OOC Documentation &mdash; OOC Documentation 0 documentation</title>
+    <title>Setup &mdash; OOC Documentation 0 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,8 +25,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="OOC Documentation 0 documentation" href="#" />
-    <link rel="next" title="Introduction" href="intro.html" /> 
+    <link rel="top" title="OOC Documentation 0 documentation" href="index.html" />
+    <link rel="next" title="Installation" href="installation.html" />
+    <link rel="prev" title="Requirements for OpportunisticOwnCloud" href="requirements.html" /> 
   </head>
   <body>
     <div class="related">
@@ -36,9 +37,12 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="intro.html" title="Introduction"
+          <a href="installation.html" title="Installation"
              accesskey="N">next</a> |</li>
-        <li><a href="#">OOC Documentation 0 documentation</a> &raquo;</li> 
+        <li class="right" >
+          <a href="requirements.html" title="Requirements for OpportunisticOwnCloud"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">OOC Documentation 0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -47,37 +51,26 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="ooc-documentation">
-<h1>OOC Documentation<a class="headerlink" href="#ooc-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Contents:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#future-of-ooc">Future of OOC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#intstalling-ooc-vs-contributing-to-ooc">Intstalling OOC vs. Contributing to OOC</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements for OpportunisticOwnCloud</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="requirements.html#phone">Phone</a></li>
-<li class="toctree-l2"><a class="reference internal" href="requirements.html#webdav-server">WebDAV Server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="requirements.html#android">Android</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="setup.html#from-the-code">From the code</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-</ul>
+  <div class="section" id="setup">
+<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<p>The setup assumes you have the Android ADT and Android SDK installed.</p>
+<div class="section" id="from-the-code">
+<h2>From the code<a class="headerlink" href="#from-the-code" title="Permalink to this headline">¶</a></h2>
+<p>In the terminal, enter:</p>
+<blockquote>
+<div>git clone git://github.com/mvigil90/OpportunisticOwnCloud.git</div></blockquote>
+<p>Open Eclipse with ADT support.</p>
+<ol class="arabic simple">
+<li>Go to &#8216;File&#8217;&gt;&#8217;Import&#8217;.</li>
+<li>Select &#8216;Android&#8217;&gt;&#8217;Existing Code into Workspace&#8217;.</li>
+<li>Browse to /path/to/OpportunisticOwnCloud/actionbarsherlock.</li>
+<li>Again, select &#8216;Android&#8217;&gt;&#8217;Existing Code into Workspace&#8217;.</li>
+<li>Browse to /path/to/OpportunisticOwnCloud263 and select</li>
+<li>Now, right-click the OpportunisticOwnCloud project in the Eclipse Package Explorer.</li>
+<li>Select &#8216;Properties&#8217; and select actionbarsherlock as a library.</li>
+<li>Make sure that simple-xml-2.6.2.jar is in the libs/ directory in the OpportunisticOwnCloud project.</li>
+</ol>
 </div>
-</div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
-<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
-<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
-</ul>
 </div>
 
 
@@ -86,20 +79,23 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table Of Contents</a></h3>
+  <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">OOC Documentation</a><ul>
+<li><a class="reference internal" href="#">Setup</a><ul>
+<li><a class="reference internal" href="#from-the-code">From the code</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
 
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="requirements.html"
+                        title="previous chapter">Requirements for OpportunisticOwnCloud</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="intro.html"
-                        title="next chapter">Introduction</a></p>
+  <p class="topless"><a href="installation.html"
+                        title="next chapter">Installation</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/index.txt"
+    <li><a href="_sources/setup.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -126,9 +122,12 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="intro.html" title="Introduction"
+          <a href="installation.html" title="Installation"
              >next</a> |</li>
-        <li><a href="#">OOC Documentation 0 documentation</a> &raquo;</li> 
+        <li class="right" >
+          <a href="requirements.html" title="Requirements for OpportunisticOwnCloud"
+             >previous</a> |</li>
+        <li><a href="index.html">OOC Documentation 0 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
